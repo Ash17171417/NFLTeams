@@ -1,6 +1,7 @@
 package com.example.nflteams
 
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
@@ -12,7 +13,8 @@ class NFLTeamHolder(
     fun bind(nflteam: NFLTeam) {
         binding.teamName.text = nflteam.teamName
         binding.stadiumName.text = nflteam.stadium.toString()
-
+        val resourceId = binding.root.resources.getIdentifier(nflteam.logoFile.substringBefore("."),"drawable",binding.root.context.packageName)
+        binding.teamLogo.setImageResource(resourceId)
         binding.root.setOnClickListener {
             Toast.makeText(
                 binding.root.context,

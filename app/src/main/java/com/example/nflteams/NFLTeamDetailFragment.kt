@@ -16,10 +16,10 @@ class NFLTeamDetailFragment: Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         nflteam = NFLTeam(
-            teamID = "1",
+            teamID = "colts",
             teamName = "Indianapolis Colts",
             logoFile = "colts.png",
-            conference = "",
+            conference = "AFC",
             division = "AFC South",
             stadium = "Lucas Oil Stadium",
             latitude = 39.760056,
