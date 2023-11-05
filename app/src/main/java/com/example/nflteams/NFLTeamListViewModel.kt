@@ -30,10 +30,10 @@ class NFLTeamListViewModel: ViewModel() {
         NFLTeam ("rams", "Los Angeles Rams", "rams.png", "NFC", "NFC West", "SoFi Stadium", 33.95345,-118.3392),
         NFLTeam ("ravens", "Baltimore Ravens", "ravens.png", "AFC", "AFC North", "M&T Bank Stadium", 39.2779876,-76.6248931),
         NFLTeam ("saints", "New Orleans Saints", "saints.png", "NFC", "NFC South", "Mercedes-Benz Superdome", 29.951061,-90.0834329),
-        NFLTeam ("seahawks", "Seattle Seahawks", "seahawks.png", "NFC", "NFC West", "CenturyLink Field", 47.5951518,-122.3338281),
+        NFLTeam ("seahawks", "Seattle Seahawks", "seahawks.png", "NFC", "NFC West", "CenturyLink Field", 47.5951518,-122.3342143),
         NFLTeam ("steelers", "Pittsburgh Steelers", "steelers.png", "AFC", "AFC North", "Heinz Field", 40.446667,-80.015833),
         NFLTeam ("texans", "Houston Texans", "texans.png", "AFC", "AFC South", "NRG Stadium", 29.684722,-95.410833),
-        NFLTeam ("the49ers", "San Francisco 49ers", "the49ers.png", "NFC", "NFC West", "Levi's Stadium", 37.403,121.97),
+        NFLTeam ("the49ers", "San Francisco 49ers", "the49ers.png", "NFC", "NFC West", "Levi's Stadium", 37.403,-121.97),
         NFLTeam ("titans", "Tennessee Titans", "titans.png", "AFC", "AFC South", "Nissan Stadium", 36.166251,-86.771422),
         NFLTeam ("vikings", "Minnesota Vikings", "vikings.png", "NFC", "NFC North", "Mall of America Field", 44.973889,-93.258056),
         NFLTeam ("washington", "Washington Football Team", "washington.png", "NFC", "NFC East", "FedExField", 38.907778,-76.864444)

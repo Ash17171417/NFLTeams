@@ -1,5 +1,8 @@
 package com.example.nflteams
 
+import java.io.Serializable
+
+
 data class NFLTeam(
     val teamID: String,
     val teamName: String,
@@ -9,4 +12,4 @@ data class NFLTeam(
     val stadium: String,
     val latitude: Double,
     val longitude: Double
-)
+) :Serializable

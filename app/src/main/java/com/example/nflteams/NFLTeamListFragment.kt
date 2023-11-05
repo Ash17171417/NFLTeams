@@ -7,12 +7,13 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.nflteams.databinding.FragmentTeamListBinding
 
 private const val TAG = "NFLTeamListFragment"
 
-class NFLTeamListFragment : Fragment() {
+class NFLTeamListFragment : Fragment(), OnTeamClickListener {
 
     private var _binding: FragmentTeamListBinding? = null
     private val binding
@@ -25,7 +26,7 @@ class NFLTeamListFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        Log.d(TAG, "Total Teams: $(NFLTeamsListViewModel.NFLTeams.size")
+        Log.d(TAG, "Total Teams: $(NFLTeamsListViewModel.teams.size")
     }
 
     override fun onCreateView(
@@ -38,7 +39,7 @@ class NFLTeamListFragment : Fragment() {
         binding.teamRecyclerView.layoutManager = LinearLayoutManager(context)
 
         val NFLTeams = NFLTeamListViewModel.teams
-        val adapter = NFLTeamListAdapter(NFLTeams)
+        val adapter = NFLTeamListAdapter(NFLTeams, this)
         binding.teamRecyclerView.adapter = adapter
 
         return binding.root
@@ -46,6 +47,10 @@ class NFLTeamListFragment : Fragment() {
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
+    }
+
+    override fun onTeamClick(nflTeam: NFLTeam) {
+        findNavController().navigate(NFLTeamListFragmentDirections.showNflteamDetail(nflTeam))
     }
 
 }
